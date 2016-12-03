@@ -1,6 +1,6 @@
 import React from "react";
 
-class Home extends React.Component {
+class MyApp extends React.Component {
 
     render() {
         return <div className="container-fluid">
@@ -11,4 +11,9 @@ class Home extends React.Component {
 
 }
 
-export default Home;
+MyApp.propTypes = {
+    onClickLogo: React.PropTypes.func.isRequired,
+    highlight: React.PropTypes.bool.isRequired
+};
+
+export default MyApp;

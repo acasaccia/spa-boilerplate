@@ -1,6 +1,8 @@
-import { render } from "react-dom";
+import React from "react";
 import { createStore, applyMiddleware } from "redux";
-import { browserHistory } from "react-router";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { Router, browserHistory } from "react-router";
 import createLogger from "redux-logger";
 import "./assets";
 import reducer from "./reducer";
