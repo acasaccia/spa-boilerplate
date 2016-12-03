@@ -48,9 +48,9 @@ gulp.task("webpack_dev_server", (callback) => {
         stats: { colors: true },
         historyApiFallback: true
     }).listen(PORT, "localhost", (err) => {
-            if (err) {
-                throw new util.PluginError("webpack-dev-server", err);
-            }
-            callback();
-        });
+        if (err) {
+            throw new util.PluginError("webpack-dev-server", err);
+        }
+        callback();
+    });
 });
