@@ -1,17 +1,14 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
-import { createStore, applyMiddleware } from 'redux'
-import { Router, Route, Redirect, browserHistory } from 'react-router'
-import createLogger from 'redux-logger';
-import MyApp from './components/my-app'
-import './assets'
-import reducer from './reducer'
-import routes from './routes'
+import { render } from "react-dom";
+import { createStore, applyMiddleware } from "redux";
+import { browserHistory } from "react-router";
+import createLogger from "redux-logger";
+import "./assets";
+import reducer from "./reducer";
+import routes from "./routes";
 
 var middleware = [];
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== "production") {
     middleware.push(createLogger());
 }
 
@@ -25,7 +22,7 @@ function renderApp() {
         <Provider store={store}>
             <Router history={browserHistory} routes={routes} />
         </Provider>,
-        document.getElementById('app')
+        document.getElementById("app")
     );
 }
 

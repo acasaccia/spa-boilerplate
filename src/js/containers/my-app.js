@@ -1,13 +1,13 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import MyApp from '../components/my-app'
-import Actions from '../actions'
+import React from "react";
+import { connect } from "react-redux";
+import MyApp from "../components/my-app";
+import Actions from "../actions";
 
-function mapStateToProps(state, own_props) {
+function mapStateToProps(state) {
     return state;
 }
 
-function mapDispatchToProps(dispatch, own_props) {
+function mapDispatchToProps(dispatch) {
     return {
         onClickLogo: function() {
             dispatch({
@@ -24,4 +24,4 @@ const MyAppContainer = connect(
 
 MyAppContainer.contextTypes = {store: React.PropTypes.object};
 
-export default MyAppContainer
+export default MyAppContainer;
