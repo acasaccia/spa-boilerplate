@@ -28,6 +28,13 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.js[x]?$/,
+                include: /src/,
+                loader: 'eslint'
+            }
+        ],
         loaders: [
             {
                 test: /\.js[x]?$/,
