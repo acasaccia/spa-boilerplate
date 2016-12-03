@@ -9,6 +9,8 @@ var plugins = [
     })
 ];
 
+var preLoaders = [];
+
 if (process.env.NODE_ENV === 'production') {
     plugins.push(
         new webpack.optimize.UglifyJsPlugin({
@@ -16,6 +18,12 @@ if (process.env.NODE_ENV === 'production') {
             comments: false
         })
     );
+} else {
+    preLoaders.push({
+        test: /\.js[x]?$/,
+        include: /src/,
+        loader: 'eslint'
+    });
 }
 
 module.exports = {
@@ -28,13 +36,7 @@ module.exports = {
         filename: "bundle.js"
     },
     module: {
-        preLoaders: [
-            {
-                test: /\.js[x]?$/,
-                include: /src/,
-                loader: 'eslint'
-            }
-        ],
+        preLoaders: preLoaders,
         loaders: [
             {
                 test: /\.js[x]?$/,
