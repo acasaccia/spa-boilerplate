@@ -28,9 +28,7 @@ gulp.task("webpack", (callback) => {
         if (err) {
             throw new util.PluginError("webpack", err);
         }
-        util.log("[webpack]", stats.toString({
-            colors: true
-        }));
+        util.log("[webpack]", stats.toString());
         callback();
     });
 });
