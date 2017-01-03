@@ -1,11 +1,11 @@
 machine:
   environment:
-    API_BASE_URL: http://localhost:1234
+    API_URL: http://localhost:1234
 test:
   override:
     - npm start:
         background: true
-    - npm run mockserver:
+    - npm run mock-api:
         background: true
     - sleep 60
     - npm test
