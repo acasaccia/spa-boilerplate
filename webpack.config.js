@@ -1,5 +1,5 @@
 var path = require("path");
-var webpack = require('webpack');
+var webpack = require("webpack");
 
 var plugins = [
     new webpack.DefinePlugin({
@@ -12,7 +12,7 @@ var plugins = [
 
 var preLoaders = [];
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
     plugins.push(
         new webpack.optimize.UglifyJsPlugin({
             compress: { warnings: false },
@@ -23,7 +23,7 @@ if (process.env.NODE_ENV === 'production') {
     preLoaders.push({
         test: /\.js[x]?$/,
         include: /src/,
-        loader: 'eslint'
+        loader: "eslint"
     });
 }
 
