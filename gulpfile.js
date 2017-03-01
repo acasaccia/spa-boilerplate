@@ -52,32 +52,3 @@ gulp.task("webpack_dev_server", (callback) => {
         callback();
     });
 });
-
-gulp.task("test", (done) => {
-    const jasmine = require("gulp-jasmine");
-    const glob = require("glob");
-    glob("./spec/**/*.spec.js", function (error, files) {
-        if (!error) {
-            const files_length = files.length;
-            util.log("[test]", "Found", files_length, "test suites");
-            const tasks = files.map((f, i) => () => {
-                return new Promise((resolve, reject) => {
-                    util.log("[test]", "Running suite", util.colors.cyan(f), "(" + (i+1), "of", files_length + ")");
-                    setTimeout(() => {
-                        gulp.src(f).pipe(jasmine()).on("jasmineDone", resolve);
-                    }, 200);
-                });
-            });
-            // http://stackoverflow.com/questions/30823653/is-node-js-native-promise-all-processing-in-parallel-or-sequentially
-            // run sequentially an iterable of asynchronous functions
-            const tasks_chain = tasks.reduce((p, fn) => p.then(fn), Promise.resolve());
-            tasks_chain.then(() => {
-                util.log("[test]", "All done");
-                done();
-            });
-        } else {
-            util.log("[test]", "Error looking for test suites");
-            done();
-        }
-    })
-});
