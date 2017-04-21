@@ -2,7 +2,7 @@
 
 This repo can be downloaded and used as a starting point for a new single page web application with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/) and [Webpack](https://webpack.github.io/).
 It is integrated with [React router](https://github.com/ReactTraining/react-router) and [Redux Logger](https://github.com/evgenyrodionov/redux-logger).
-[Jasmine](http://jasmine.github.io/) and [Selenium web driver](http://www.seleniumhq.org/projects/webdriver/) are available for unit and system testing.
+[Jest](https://facebook.github.io/jest/) and [Selenium web driver](http://www.seleniumhq.org/projects/webdriver/) are available for unit and system testing.
 The boilerplate is designed to be continuously deployed on [Heroku](https://www.heroku.com/) and [CircleCI](https://circleci.com).
 
 ## Prerequisites

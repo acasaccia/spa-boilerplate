@@ -7,7 +7,7 @@
     "mock-api": "node mock-api/mock-api.js",
     "prestart": "gulp build",
     "start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 server.js",
-    "test": "jasmine"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -52,7 +52,7 @@
     "eslint": "3.11.1",
     "eslint-loader": "1.6.1",
     "eslint-plugin-react": "6.7.1",
-    "jasmine": "2.5.2",
+    "jest": "19.0.2",
     "sanitize-filename": "1.6.1",
     "selenium-webdriver": "3.0.1",
     "webpack-dev-server": "1.16.2"
