@@ -1,3 +1,5 @@
+If you are looking for a quick and painless way to start a React application, please look no further and head to [`create-react-app`](https://github.com/facebookincubator/create-react-app). This repository is the result of my research about React, Webpack, Redux and their seamless integration with CircleCI and Heroku. [`create-react-app`](https://github.com/facebookincubator/create-react-app) is awesome for starting, but baking my own solution gave me deeper understanding of the technologies involved, so it might be useful to do that once you got familiar with React!
+
 # Single Page Application Boilerplate
 
 This repo can be downloaded and used as a starting point for a new single page web application with [React](https://facebook.github.io/react/), [Redux](http://redux.js.org/) and [Webpack](https://webpack.github.io/).
